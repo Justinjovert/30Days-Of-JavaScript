@@ -16,4 +16,4 @@ Once I am cofident with my skills, I plan to learn JavaScript frameworks and lib
 
 This is all possible thanks to Asabeneh Yetayeh.
 
--(Asabeneh Yetayeh Github)[https://github.com/asabeneh]
+[Asabeneh Yetayeh Github](https://github.com/asabeneh)
