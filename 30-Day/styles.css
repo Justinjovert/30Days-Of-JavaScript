@@ -385,7 +385,7 @@ body.dark {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 20px 200px; */
+    padding: 20px 200px;
     background-color: white;
 }
 
