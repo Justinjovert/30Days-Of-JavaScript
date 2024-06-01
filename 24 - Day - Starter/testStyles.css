@@ -1,0 +1,107 @@
+body{
+    height: 100dvh;
+    background: url('images/galaxy.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'apple-system,BlinkMacSystemFont', "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(63, 63, 63, 0.5);
+    padding: 100px 50px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wrapper > img{
+    height: 400px;
+    width: 400px;
+}
+
+.headlineContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    letter-spacing: 5px;
+    font-size: 26px;
+    text-shadow: 2px;
+}
+
+.headlineStyle{
+    color: white;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputFields{
+    margin: 0px 0px 50px 0px;
+}
+
+.inputFields > input{
+    padding: 15px 10px;
+    width: 300px;
+    font-size: 18px;
+}
+
+.inputFields > select {
+    padding: 15px 10px;
+    width: 250px;
+    font-size: 18px;
+}
+
+.inputFields > button{
+    margin: 0px 0px 0px 20px;
+    padding: 15px 10px;
+    width: 200px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.weightContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 700px;
+    background-color: rgb(63, 63, 63, 0.5);
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.weightContainer > span{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+
+.weight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(63, 63, 63, 0.5);
+}

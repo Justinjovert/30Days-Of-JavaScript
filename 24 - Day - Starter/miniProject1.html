@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript for Everyone:DOM</title>
+    </head>
+    <script defer src="./miniProject1.js"></script>
+    <link rel="stylesheet" href="testStyles.css">
+    <body>
+        <div class="headlineContainer">
+            <h1 id="headline" class="headlineStyle">Calculate a weight of an object on a planet</h1>
+        </div>
+        <div id='content' class="content">
+            <div class="inputFields">
+                <input id = 'massInput' placeholder="Mass in Kilogram">
+                <select id="planetSelect" name="planets">
+                    <option value = '' disabled selected style="color: lightgray">--select planet--</option>
+                    <option value = 'mercury' data-gravity="3.7">Mercury</option>
+                    <option value = 'venus' data-gravity="8.87">Venus</option>
+                    <option value = 'earth' data-gravity="9.8">Earth</option>
+                    <option value = 'mars' data-gravity="3.71">Mars</option>
+                    <option value = 'jupiter' data-gravity="24.79">Jupiter</option>
+                    <option value = 'saturn' data-gravity="10.44">Saturn</option>
+                    <option value = 'uranus' data-gravity="8.87">Uranus</option>
+                    <option value = 'neptune' data-gravity="11.15">Neptune</option>
+                    <option value = 'pluto' data-gravity="0.62">Pluto</option>
+                </select>
+                <button id = 'calculate'>Calulate Weight</button>
+            </div>
+
+
+            <!-- Empty by default 
+            Create container after conditions are met; 
+            mass and buttonclick -->
+            <!-- If mass field is empty, display a message -->
+            <!-- <div id = 'container' class="container">
+                <div id='wrapper' class ='wrapper'>
+                    <img id = 'planetImage' src="./images/earth.png" alt="Earth Image" srcset="">
+                    <div id = 'weightContainer' class ='weightContainer'>
+                        <div id = 'weight' class = 'weight'>100 TON</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </body>
+</html>

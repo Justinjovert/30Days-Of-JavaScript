@@ -1,0 +1,48 @@
+//Write a function called tenMostFrequentWords which get the ten most frequent word from a string?
+
+
+
+paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+
+
+
+
+const tenMostFrequentWords = (paragraph) =>{
+    let paraArr = {}
+    pattern = /[a-zA-Z]+/gi
+    x = paragraph.match(pattern).map(word => {
+        if(paraArr[word]){
+            paraArr[word]++
+        }
+        else{
+            paraArr[word] = 1
+        }
+    })
+    return paraArr
+}
+
+
+const cleanText = (sentence) => {
+    pattern = /[%@$&#;!]+/gi
+    a = sentence.replace(pattern, '')
+    return a
+}
+
+const displayText = (input) => {
+
+    a = Object.entries(input).sort((a, b) => b[1] - a[1])
+
+    console.table(a)
+
+    a.forEach(entry => {
+        console.log(entry)
+    })
+    return
+}
+
+sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+input = cleanText(sentence)
+console.log(input)
+
+displayText(tenMostFrequentWords(input))
+

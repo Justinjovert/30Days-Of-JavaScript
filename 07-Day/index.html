@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>30DaysOfScript:Internal Script</title>
+    </head>
+    <style>
+        body{
+            background-color: rgb(51, 41, 41);
+        }
+      #colorBox1 {
+          width: 100px;
+          height: 100px;
+          background-color: lightcyan;
+      }
+
+      #colorBox2 {
+          width: 100px;
+          height: 100px;
+          background-color: gray;
+      }
+      .outerBox{
+        width: 500px;
+        height: 500px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+    <script src="./choice.js"></script>
+    <script src="./ConvertToOtherjs"></script>
+    <script src="./exercise.js"></script>
+    <body>
+        <div class = "container">
+            <div class="outerBox">
+                <div>
+                    <div id="colorBox1">Hex Code</div>
+                    <button onclick="changeColorToRGB()">Change Color</button>
+                </div>
+                <div>
+                    <div id="colorBox2">RGB</div>
+                    <button onclick="changeColorToHex()">Change Color</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

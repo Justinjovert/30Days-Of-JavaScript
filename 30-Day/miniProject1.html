@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript for Everyone:DOM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"
+        integrity="sha512-ZwR1/gSZM3ai6vCdI+LVF1zSq/5HznD3ZSTk7kajkaj4D292NLuduDCO1c/NT8Id+jE58KYLKT7hXnbtryGmMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script type="text/javaScript" src="./miniProject1.js" defer></script>
+    <script type="text/javaScript" src="./chart.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+
+<body>
+    <header class="header">
+        <h1 id="headerTitle">World Countries Data</h1>
+        <div class="randomContainerName">
+            <h2 id="totalCountries"></h2>
+            <button id='themeToggle' class='themeToggle'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height="20px">
+                    <circle cx="256" cy="256" r="256" fill="#3b97d3" />
+                    <path
+                        d="M437.78 275.64c-7.82-43.24-21.24-83.83-38.82-120.42 0-56.64-20.5-107.46-54.27-147.36C304.64 14.5 281.96 0 256 0s-48.64 14.5-88.69 40.86c-33.76 39.9-54.27 90.72-54.27 147.36-17.58 36.59-31 77.18-38.82 120.42-59.72 16.72-104.13 70.72-104.13 134.36 0 74.8 60.84 135.64 135.64 135.64 24.88 0 48.42-6.8 68.59-18.67 19.85 11.86 43.38 18.67 68.59 18.67 74.8 0 135.64-60.84 135.64-135.64-.02-63.64-44.47-117.64-104.19-134.36z"
+                        fill="#1d6fa5" />
+                    <path
+                        d="M322.02 48.86c24.46 13.12 45.51 31.71 62.42 54.89C407.34 99.22 432 130.35 432 164.98c0 31.99-16.1 61.2-42.91 78.48-12.73-15.34-28.93-28.14-47.09-37.37 12.76 7.39 23.95 17.32 32.88 29.14 14.25-3.14 27.79-8.03 40.07-14.38-13.56 13.61-30.31 24.91-49.72 33.28-15.3-23.1-36.89-41.68-62.47-54.81-27.15-14.99-57.33-22.9-89.85-22.9C96.33 136.24 0 232.57 0 362.14c0 16.57 1.56 32.78 4.52 48.53 8.68-3.11 16.94-6.85 24.6-11.27 18.67-11.63 33.99-26.94 45.62-45.62 4.42-7.66 8.16-15.92 11.27-24.6 3.94-15.76 5.91-32 5.91-48.53 0-97.42 78.96-176.38 176.38-176.38 34.62 0 64.75 24.68 89.85 45.84-4.15-16.14-10.51-30.71-18.39-43.19-8.71-14.18-18.74-27.37-29.86-39.28z"
+                        `>
+                </svg>
+            </button>
+        </div>
+        <h3 id='feedback' class='feedback'></h3>
+    </header>
+    <section class='search-container'>
+        <input class='search-bar' placeholder="🔍 Search Country by name, capital, and language">
+        <div class="sort-button-container">
+            <button id="sortByName" class="sort-button"><span class="sort-button-text">Name</span></button>
+            <button id="sortByCapital" class="sort-button"><span class="sort-button-text">Capital</span></button>
+            <button id="sortByPopulation" class="sort-button"><span class="sort-button-text">Population</span></button>
+            <button id="goToChart" class="chartSVG"><img id='chartSVG' src='./assets/svgChart.svg' alt=''></button>
+        </div>
+    </section>
+    <section class="country-container">
+    </section>
+    <section id="chart-container" class="chart-container">
+        <div id="clickableContainer" class="clickableContainer">
+            <div id="buttons">
+                <button id="popButton" class="ccButton">POPULATION</button>
+                <button id="langButton" class="ccButton">LANGUAGES</button>
+            </div>
+            <span id="phrase">10 Most Populated Countries</span>
+        </div>
+        <div class="barVisualWrapper">
+            <div id="dataLabels" class="dataChart labelsChart"></div>
+            <div id="populationTab" class="barVisualContainer">
+                <canvas id="populationChart" class="myChart"></canvas>
+            </div>
+            <div id="languagesTab" class="barVisualContainer" style="display: none">
+                <canvas id="languageChart" class="myChart"></canvas>
+            </div>
+            <div id="dataChart" class="dataChart"></div>
+        </div>
+    </section>
+    <footer class='footer'>
+        <span class='aboutUs'>Developed by JA</span>
+        <button id='goUp' class='back-to-top'><img src='./assets/upSVG.svg' alt='goUp'></button>
+    </footer>
+</body>
+
+</html>

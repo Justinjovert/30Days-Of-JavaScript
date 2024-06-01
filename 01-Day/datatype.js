@@ -1,0 +1,5 @@
+console.log(typeof firstName)
+console.log(typeof age)
+console.log(typeof isSingle)
+console.log(typeof Job)
+console.log(typeof networth)

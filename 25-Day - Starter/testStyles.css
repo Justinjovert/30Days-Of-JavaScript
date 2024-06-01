@@ -1,0 +1,229 @@
+body{
+    --background-color: rgb(236, 236, 236);
+    --secondaryBGColor: lightgray;
+    --text-color: rgb(100, 100, 100);
+    --activeTextColor: white;
+    --transition-delay: 1s;
+    --accent-color: #333;
+    --box-shadow:   0 5px 5px -2px rgba(201, 201, 201, 0.8), 
+                    0 -5px 5px -2px rgba(201, 201, 201, 0.8);
+
+    transition: var(--transition-delay);
+    accent-color: var(--accent-color);
+    background-color: var(--background-color);
+    height: 100dvh;
+    margin: 0;
+    font-family: 'apple-system,BlinkMacSystemFont', "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+body.dark{
+    --accent-color: #D0D016;
+    --background-color: #333;
+    --secondaryBGColor: #4e4e4e;
+    --text-color: white;
+    --activeTextColor: black;
+    --box-shadow:   0 5px 5px -2px rgba(46, 46, 46, 0.8), 
+                    0 -5px 5px -2px rgba(46, 46, 46, 0.8);
+}
+
+.header{
+    height:15dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header > h1 {
+    display:flex;
+    justify-content: center;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: orange;
+    margin: 0;
+}
+
+.header h2{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--transition-delay);
+    letter-spacing: 1.2px;
+}
+
+.randomContainerName{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.themeToggle{
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-delay);
+    fill: var(--accent-color);
+    background-color: transparent;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 80dvh;
+    min-height: 700px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition-delay);
+}
+
+.clickableContainer{
+    height: 6.5em;
+    width: 100%;
+    background-color: var(--background-color);
+    transition: var(--transition-delay);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 5px -2px rgba(207, 207, 207, 0.8);
+}
+
+.ccButton{
+    height: 2.3em;
+    background: orange;
+    width: 130px;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer;
+    margin: 0.5rem 3px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.clickableContainer span{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    transition: var(--transition-delay);
+}
+.barVisualWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--secondaryBGColor);
+    transition: var(--transition-delay);
+    padding-bottom: 20px;;
+    height: 100%;
+}
+.barVisualContainer{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    max-width: 600px;
+    min-width: 30vw;
+    justify-content: center;
+}
+
+.myChart{
+    width:auto;
+    height: 100%;
+}
+.dataChart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10rem;
+    height: 100%;
+    padding: 31px 0 10px 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.labelsChart{
+    display: flex;
+    align-items: end;
+    margin: 0 1em 0 0;
+}
+.dataSpan{
+    color: var(--text-color);
+    transition: var(--transition-delay);
+    font-size: 12px;
+    font-weight: 500;
+}
+.footerContainer{
+    display: flex;
+    justify-content: center;
+}
+.footerBar{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 2.3em;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--background-color);
+    transition: var(--transition-delay);
+    border-radius: 25px;
+    padding: 0 5px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 576px){
+    .barVisualContainer{
+        width:80vw;
+    }
+    .clickableContainer{
+        display: none
+    }
+    .dataChart{
+        width: 7rem;
+        text-align: end;
+    }
+    #dataChart{
+        display: none;
+    }
+    #headerTitle{
+        font-size: 24px;
+    }
+    #totalCountries{
+        font-size: 12px;
+    }
+    /* .footerMQ{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    } */
+    .ccButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        height: 1.8em;
+        width: 120px;
+        /* margin: 0 5px; */
+        border-radius: 25px;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        transition: var(--transition-delay);
+        /* display: none; */
+        
+    }
+    .contentContainer{
+        box-shadow: 0 0 0;
+    }
+    .clickableContainer{
+        box-shadow: 0 0 0;
+    }
+    .ccButton-active{
+        color: var(--activeTextColor);
+        background: orange;
+        /* font-weight: bold; */
+    }
+    .randomContainerName{
+        gap: 0.2em
+    }
+}

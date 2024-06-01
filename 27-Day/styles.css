@@ -1,0 +1,173 @@
+body {
+    --background: white;
+    --textColor: black;
+    --cardColor: #fafafa;
+    --darkMode: #333;
+    --transition-delay: 1s;
+
+
+    background-color: var(--background);
+    transition: background-color 0.2s ease-in-out;
+    padding: 0;
+    margin: 0% 10%;
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body.dark{
+    --background: #3C5377;
+    --textColor: white;
+    --cardColor: #ffc728;
+    --darkMode: yellow;
+}
+
+.darkMode {
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    border: 0;
+    background-color: #ebebeb;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+                inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease;
+    position: absolute;
+    cursor: pointer;
+    right: 10%;
+}
+
+.darkMode::after{
+    content: "";
+    display:  block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 180px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    transition: transform 0.4s ease;
+}
+
+
+.darkMode.active{
+    background-color: #5574a5;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+                inset 0px -5px 15px rgba(143, 143, 143, 0.4);
+}
+.darkMode.active::after{
+    transform: translateX(60px);
+    background: linear-gradient(180deg, #2b3b55, #3C5377)
+}
+
+.sun, .moon {
+    top: 8px;
+    z-index: 100;
+    position: absolute;
+    width: 25px;
+}
+.sun{
+    left: 7px;
+}
+
+.moon{
+    right: 7px;
+}
+.darkMode.active .moon{
+    fill: white;
+}
+
+.name{
+    padding-top: 50px;
+    font-size: 4em;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--textColor)
+}
+
+.titles{
+    width: auto;
+    padding: 2rem 10px;
+    background-color: rgb(255, 222, 222);
+    font-size: 1.5em;
+}
+.titleText{
+    opacity: 0;
+    display: inline-block;
+}
+.titleText.active{
+    transform: translateX(20px);
+    transition: transform 0.7s ease, opacity 0.5s ease-in;
+    /* transition: opacity 0.5s ease; */
+    /* transition: color 0.5s ease; */
+    opacity: 1;
+}
+.bio{
+    font-size: 1em;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+    color: var(--textColor)
+}
+
+.accomplishment{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.card{
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cardColor);
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+.card:hover{
+    transform: rotateY(180deg)
+}
+.back > span{
+    font-weight: 600;
+}
+
+.front{
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+}
+
+.teach{
+    color: var(--textColor);
+}
+
+.teachSpan{
+    font-size: 30px;
+    font-weight: 600;
+    opacity: 0;
+}
+.active{
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}

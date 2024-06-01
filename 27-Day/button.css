@@ -1,0 +1,68 @@
+body {
+    background-color: #333;
+    width: 100vw;
+    height: 100dvh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+}
+
+.darkMode {
+    width: 250px;
+    height: 100px;
+    border-radius: 100px;
+    border: 0;
+    background-color: #ebebeb;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+                inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.darkMode::after{
+    content: "";
+    display:  block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 180px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    transition: transform 0.4s ease;
+}
+
+
+.darkMode:hover{
+    background-color: #333;
+    box-shadow: inset 0px 5px 15px rgba(255, 255, 255, 0.4),
+                inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+}
+.darkMode:hover::after{
+    transform: translateX(150px);
+    background: linear-gradient(180deg, #5e5e5e, #333)
+}
+
+.sun, .moon {
+    top: 15px;
+    z-index: 100;
+    position: absolute;
+    width: 70px;
+}
+.sun{
+    left: 14px;
+}
+
+.moon{
+    right: 15px;
+}
+.darkMode:hover .moon{
+    fill: white;
+}
